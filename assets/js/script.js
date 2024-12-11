@@ -19,8 +19,8 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// news variables
+const newsItem = document.querySelectorAll("[data-news-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -32,31 +32,31 @@ const modalText = document.querySelector("[data-modal-text]");
 
 
 // modal toggle function
-const testimonialsModalFunc = function () {
+const newsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+for (let i = 0; i < newsItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  newsItem[i].addEventListener("click", function () {
 
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    modalTitle.innerHTML = this.querySelector("[data-news-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-news-text]").innerHTML;
     const modalDate = document.querySelector("#data-modal-date");
-    modalDate.setAttribute("datetime", this.querySelector("#data-testimonials-date").getAttribute("datetime"));
-    modalDate.innerHTML = this.querySelector("#data-testimonials-date").innerHTML;
+    modalDate.setAttribute("datetime", this.querySelector("#data-news-date").getAttribute("datetime"));
+    modalDate.innerHTML = this.querySelector("#data-news-date").innerHTML;
 
-    testimonialsModalFunc();
+    newsModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", newsModalFunc);
+overlay.addEventListener("click", newsModalFunc);
 
 
 
