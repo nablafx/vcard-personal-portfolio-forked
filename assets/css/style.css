@@ -283,7 +283,7 @@ article.active {
   padding: 15px;
   padding-top: 45px;
   border-radius: 14px;
-  box-shadow: var(--shadow-2);
+  border: 1px solid var(--jet);
   cursor: pointer;
   z-index: 1;
 }
@@ -690,17 +690,14 @@ main {
 
 .modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
 
-.modal-avatar-box {
-  background: var(--bg-gradient-onyx);
-  width: max-content;
-  border-radius: 14px;
-  margin-bottom: 15px;
-  box-shadow: var(--shadow-2);
-}
-
 .modal-img-wrapper > img { display: none; }
 
 .modal-title { margin-bottom: 4px; }
+
+.modal-content{
+  margin-top: 20px;
+  margin-right: 70px;
+}
 
 .modal-content time {
   font-size: var(--fs-6);
@@ -715,7 +712,6 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
 
 /**
  * #clients 
